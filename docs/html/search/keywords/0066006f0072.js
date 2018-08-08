@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("for",["Function"],[["formstring",,[[,,,,0,"File:gstdlib.h:formstring"]]]]);

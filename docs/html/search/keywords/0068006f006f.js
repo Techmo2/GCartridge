@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("hoo",["Function"],[["Hook",,[[,,,,0,"File:gstdlib.h:Hook"]]]]);

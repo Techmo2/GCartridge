@@ -1,0 +1,1 @@
+NDSearch.OnPrefixDataLoaded("reg",["Function"],[["RegisterFunction",,[[,,,,0,"File:gstdlib.h:RegisterFunction"]]]]);
