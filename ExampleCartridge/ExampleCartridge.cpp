@@ -1,14 +1,11 @@
 #include <iostream>
+#include "gstdlib.h"
 #include "cartridge.h"
 
 Cartridge("Example Cartridge v1.0")
 
 Start() {
-	LUA->PushSpecial(GarrysMod::Lua::SPECIAL_GLOB); // Push the global table
-	LUA->GetField(-1, "print"); // Get the print function
-	LUA->PushString("Hello from example cartridge"); // Push our argument
-	LUA->Call(1, 0); // Call the function
-	LUA->Pop(); // Pop the global table off the stack
+	gstd::console::PrintC("Hello from Example Cartridge!\n", Color(255, 255, 255, 255));
 	return 0;
 }
 

@@ -1,6 +1,7 @@
 #pragma once
 #ifndef CARTRIDGE_h
 #define CARTRIDGE_h
+#define GMMODULE
 
 #include <GarrysMod\Lua\Interface.h>
 

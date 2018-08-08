@@ -29,7 +29,7 @@
     <ClInclude Include="src\colors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cartridge.h">
+    <ClInclude Include="src\cartridge.h">
       <Filter>Cartridge</Filter>
     </ClInclude>
   </ItemGroup>

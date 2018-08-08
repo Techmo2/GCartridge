@@ -179,7 +179,7 @@
     <ClCompile Include="src\gstdlib.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cartridge.h" />
+    <ClInclude Include="src\cartridge.h" />
     <ClInclude Include="src\colors.h" />
     <ClInclude Include="src\gstdlib.h" />
   </ItemGroup>
