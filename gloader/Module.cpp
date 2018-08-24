@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include <filesystem>
+#include <Windows.h>
 
 #define GLOADER_VERSION "1.0"
 #define COLOR_LIGHT_BLUE Color(100, 100, 255, 255)
@@ -41,7 +42,7 @@ void GetCartridgePaths(std::vector<std::string> &paths) {
 }
 
 DLL_EXPORT int gmod13_open(lua_State* state) {
-	
+
 	ConColorMsg(COLOR_LIGHT_BLUE, ("////////////////\n" + std::string("/ GLoader v") + GLOADER_VERSION + " /\n////////////////\n").c_str());
 	enabled = true;
 
@@ -53,8 +54,12 @@ DLL_EXPORT int gmod13_open(lua_State* state) {
 		enabled = false;
 	}
 
+	// Make sure required directories exist
+	CreateDirectory("cartridges", NULL);
+	CreateDirectory("profiles", NULL);
+
 	if (enabled) {
-		ConColorMsg(COLOR_CYAN, "Loading cartridges\n");
+		ConColorMsg(COLOR_CYAN, "\nLoading cartridges\n");
 		std::vector<std::string> paths;
 		GetCartridgePaths(paths);
 
@@ -67,9 +72,9 @@ DLL_EXPORT int gmod13_open(lua_State* state) {
 			c_count++;
 		}
 
-		ConColorMsg(COLOR_CYAN, "Initializing Cartridges\n");
+		ConColorMsg(COLOR_CYAN, "\nInitializing Cartridges\n\n");
 		for (Cartridge cartridge : cartridges) {
-			ConColorMsg(COLOR_WHITE, ("Initializing: " + cartridge.name + '\n').c_str());
+			//ConColorMsg(COLOR_WHITE, ("Initializing: " + cartridge.name + '\n').c_str());
 			if (cartridge.loaded) {
 				cartridge.hFunc_INIT(state);
 			}

@@ -102,7 +102,7 @@
     </Link>
     <Lib>
       <AdditionalDependencies>legacy_stdio_definitions.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;bitmap.lib;choreoobjects.lib;dmxloader.lib;mathlib.lib;matsys_controls.lib;nvtristrip.lib;particles.lib;raytrace.lib;steam_api.lib;vgui_controls.lib;vmpi.lib;vstdlib.lib;vtf.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\hl2sdk-gmod\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\hl2sdk\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
       <TargetMachine>MachineX86</TargetMachine>
     </Lib>
@@ -149,7 +149,7 @@
       <AdditionalDependencies>legacy_stdio_definitions.lib;tier0.lib;tier1.lib;tier2.lib;tier3.lib;bitmap.lib;choreoobjects.lib;dmxloader.lib;mathlib.lib;matsys_controls.lib;nvtristrip.lib;particles.lib;raytrace.lib;steam_api.lib;vgui_controls.lib;vmpi.lib;vstdlib.lib;vtf.lib</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>D:\hl2sdk-gmod\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\hl2sdk\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <TargetMachine>MachineX86</TargetMachine>
     </Lib>
     <ProjectReference>

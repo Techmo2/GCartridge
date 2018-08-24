@@ -191,6 +191,10 @@ namespace gstd {
 			   ---
 		*/
 		void RegisterFunction(lua_State* state, const char* name, GarrysMod::Lua::CFunc func);
+
+		void PrintError(lua_State* state, const char* error);
+
+		void ThrowError(lua_State* state, const char* error);
 	}
 
 	namespace chat {

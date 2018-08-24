@@ -77,6 +77,23 @@ namespace gstd {
 			state->luabase->SetTable(-3);
 			state->luabase->Pop();
 		}
+
+		void PrintError(lua_State * state, const char * error)
+		{
+			state->luabase->PushSpecial(GarrysMod::Lua::SPECIAL_GLOB);
+			state->luabase->GetField(-1, "ErrorNoHalt");
+			state->luabase->PushString(error);
+			state->luabase->Call(1, 0);
+			state->luabase->Pop();
+		}
+
+		void ThrowError(lua_State * state, const char * error) {
+			state->luabase->PushSpecial(GarrysMod::Lua::SPECIAL_GLOB);
+			state->luabase->GetField(-1, "error");
+			state->luabase->PushString(error);
+			state->luabase->Call(1, 0);
+			state->luabase->Pop();
+		}
 	}
 
 	namespace chat {
